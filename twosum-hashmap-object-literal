@@ -1,12 +1,13 @@
 var twoSum = function(nums, target) {
-// initialize empty hash map
-const hashmap = {};
+    const hashmap = {};
 
-// for each element (value) at index i in the array:
-    // calculate complement = target - value
-    // if complement exists as a KEY in the hash map:
-        //return [hash map[complement], i]
-    //else
-        // store value as key and i as value in hash map
-// return no solution found
+    for (let i = 0; i < nums.length; i++){
+        const complement = target - nums[i]
+            if (complement in hashmap) {
+                return [hashmap[complement], i]
+            }
+            else {
+                hashmap[nums[i]] = i
+            }            
+    }
 };
