@@ -1,4 +1,6 @@
-var twoSum = function(nums, target) {
+// O(n)
+
+var twoSum = function (nums, target) {
     const hashmap = {};
 
     for (let i = 0; i < nums.length; i++){
